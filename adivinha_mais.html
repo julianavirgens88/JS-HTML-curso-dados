@@ -2,7 +2,7 @@
 <input /> //usado para fazer entrada de dados
 <button>Compare com o meu segredo</button>
 <script>
-    var segredo = 5
+    var segredo = Math.round(Math.random * 10);
     var input = document.querySelector("input"); //serve para pegar a tag do html e joga aqui no JS p funcionar.
     
     function verifica() {
@@ -12,6 +12,8 @@
     } else {
         alert("Você ERROU!!!")
     }
+    input.value = "";//quando erramos a caixa de texto já é limpa automaticamente para tentarmos novamente.
+    input.focus(); //deixa a caixinha já brilhando em destaque para a pessoa digitar a nova tentativa.
 }
 
     var button = document.querySelector("button");
